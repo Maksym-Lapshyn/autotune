@@ -39,13 +39,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 /**media Queries**/
 .navbar-default {
-    background-color: transparent;
+    background-color: black;
+}
+
+.navbar-toggle:hover, .navbar-toggle {
+        background-color: transparent;
+        color: white;
+    }
+
+.navbar-toggle {
+    margin-top: -7px;
 }
 
 .main-header {
-    background: url(../img/banner.jpeg) no-repeat;
+    background: url(../Images/Infrastructure/top-header.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 610px;
+    background-position: center;
 }
 
 .bg-color {
@@ -65,7 +75,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-brand {
     color: #fff;
     font-size: 34px;
-    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -73,13 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #FFD34E;
     background-color: transparent;
-    text-transform: uppercase;
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     padding: 0px 20px;
-    text-transform: uppercase;
 }
 
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -109,7 +116,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 38px;
     letter-spacing: 4px;
     opacity: 1;
-    text-transform: uppercase;
 }
 
 .sub-title {
@@ -119,17 +125,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 71px;
     letter-spacing: 4px;
     opacity: 1;
-    text-transform: uppercase;
 }
 
 .title {
-    font-size: 123px;
+    font-size: 80px;
     font-weight: 700;
     color: #fff;
     line-height: 88px;
     letter-spacing: 4px;
     opacity: 1;
-    text-transform: uppercase;
     padding: 25px 0px;
 }
 
@@ -138,7 +142,6 @@ h1, h2, h3, h4, h5, h6 {
     border: 0px;
     display: inline-block;
     font-size: 16px;
-    text-transform: uppercase;
     padding: 10px 40px;
     font-weight: normal;
     border-radius: 0px;
@@ -241,7 +244,7 @@ h3.txt-tl {
 }
 
 .bg-image-2 {
-    background: url('../img/cta-banner.jpg') no-repeat center fixed;
+    background: url('../Images/Infrastructure/scroller.jpg') no-repeat center fixed;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
@@ -396,28 +399,20 @@ a, a:hover {
     .section-title {
         margin-bottom: 15px;
     }
+
+    .title {
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 20px) and (max-width: 450px) {
-    .navbar-toggle:hover, .navbar-toggle {
-        background-color: #fff;
-        color: #000;
+    .navbar-default .navbar-brand {
+        font-size: 26px;
     }
 
     .navbar-toggle {
-        margin-top: 0px;
+        margin-top: -7px;
     }
-
-    .navbar-default .navbar-nav > li > a {
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.32);
-        color: #000;
-    }
-
-        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-            background-color: rgba(255, 255, 255, 0.32);
-            color: #FFD34E;
-        }
 
     .top-title {
         font-size: 15px;
@@ -454,17 +449,5 @@ a, a:hover {
     h3.txt-tl {
         font-size: 20px;
     }
-}
-
-.carousel-inner .active.left {
-    left: -25%;
-}
-
-.carousel-inner .next {
-    left: 25%;
-}
-
-.carousel-inner .prev {
-    left: -25%;
 }
 /****/

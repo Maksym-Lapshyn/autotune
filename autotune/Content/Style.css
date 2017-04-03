@@ -48,7 +48,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 .navbar-toggle {
-    margin-top: -7px;
+    margin-top: -9px;
+    color:white;
 }
 
 .main-header {
@@ -69,6 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand {
     padding: 0px;
     height: inherit;
+    margin-top:-3px;
     font-family: 'Lato', sans-serif;
 }
 
@@ -86,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
+    font-size:16px;
     padding: 0px 20px;
 }
 
@@ -408,10 +411,6 @@ a, a:hover {
 @media (min-width: 20px) and (max-width: 450px) {
     .navbar-default .navbar-brand {
         font-size: 26px;
-    }
-
-    .navbar-toggle {
-        margin-top: -7px;
     }
 
     .top-title {

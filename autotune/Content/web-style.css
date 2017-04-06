@@ -1,11 +1,4 @@
-﻿/*
-    Theme Name: Bethany
-    Theme URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
-
-body {
+﻿body {
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
@@ -16,7 +9,7 @@ body{
 }
 
 .navbar-default {
-    background-color: #011627;
+    background-color: #180B09;
 }
 
 .navbar-toggle:hover, .navbar-toggle {
@@ -36,6 +29,7 @@ body{
     background-size: cover;
     background-position: center;
 }
+
 
 .nav > li > a {
     padding: 0px;
@@ -173,18 +167,12 @@ h3.txt-tl {
     font-size: 24px;
     line-height: 1.35;
 }
-/****/
-scroller {
-    background-attachment: fixed;
-    background-repeat: repeat-y;
-    background-position: center center;
-    position: relative;
-    padding-top:100px;
-    padding-bottom:100px;
-    display: block;
-}
 
-.bg-image-2 {
+.scroller {
+    margin-top:50px;
+    margin-bottom:50px;
+    padding-top:50px;
+    padding-bottom:50px;
     background: url('../Images/Infrastructure/scroll.jpg') no-repeat center fixed;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -194,6 +182,11 @@ scroller {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-position: center center;
+    position: relative;
+    display: block;
 }
 
 .cta-txt h3 {
@@ -288,6 +281,12 @@ a, a:hover {
     color: #000;
 }
 
+footer{
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color:#180B09;
+}
+
 .contact-icon-container {
     position: absolute;
     top: -38px;
@@ -301,26 +300,6 @@ a, a:hover {
     -webkit-transform: rotate(20deg);
     transform: rotate(20deg);
 }
-/****/
-#footer {
-    background-color: #191919;
-    padding: 20px 0px;
-}
-
-.footer-copyright {
-    color: #fff;
-    line-height: 32px;
-    text-align: left;
-}
-
-.footer-social {
-    float: right;
-}
-
-    .footer-social a {
-        font-size: 18px;
-        color: #666;
-    }
 
 .link-dec, .link-dec:hover {
     color: #000;
@@ -343,10 +322,6 @@ a, a:hover {
 
     .title {
         font-size: 50px;
-    }
-
-    .footer-copyright {
-        text-align: center;
     }
 
     .section-title {

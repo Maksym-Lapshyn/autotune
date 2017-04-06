@@ -30,7 +30,7 @@ body{
 }
 
 .main-header {
-    margin-top:30px;
+    margin-top:50px;
     background: url(../Images/Infrastructure/head.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,12 +174,13 @@ h3.txt-tl {
     line-height: 1.35;
 }
 /****/
-.parallax {
+scroller {
     background-attachment: fixed;
     background-repeat: repeat-y;
     background-position: center center;
     position: relative;
-    padding: 100px 0 100px 0;
+    padding-top:100px;
+    padding-bottom:100px;
     display: block;
 }
 

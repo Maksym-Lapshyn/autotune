@@ -158,17 +158,17 @@
 
 .benefits-icon {
     margin-top: 20px;
-    height: 48px;
     text-align: center;
-    color: #AAAE7F;
+    margin-bottom: 20px;
+    height: 92px;
+    width: 92px;
 }
 
-    .benefits-icon i {
-        font-size: 35px;
-    }
+.benefits-wrapper{
+    text-align: center;
+}
 
 .benefits-text {
-    text-align: center;
     color: black;
 }
 

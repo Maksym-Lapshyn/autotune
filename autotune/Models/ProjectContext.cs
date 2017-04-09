@@ -45,8 +45,9 @@ namespace autotune.Models
 
     public enum Category
     {
-        Product,
-        Repair,
+        Front,
+        Rear,
+        Footer,
         Other
     }
 }

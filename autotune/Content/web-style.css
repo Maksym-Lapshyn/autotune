@@ -3,8 +3,8 @@
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     color: #DFFDFF;
-    background-color:#DFFDFF;
-    background-image:url('../Images/Infrastructure/shattered.png');
+    background-color: #DFFDFF;
+    background-image: url('../Images/Infrastructure/shattered.png');
 }
 
 .navbar-default {
@@ -19,23 +19,23 @@
 .navbar-default .navbar-toggle {
     margin-top: -9px;
     color: #DFFDFF;
-    border-width:2px;
+    border-width: 2px;
 }
 
-.navbar-default .navbar-toggle:hover{
-    border-color:#AAAE7F;
-    background-color: transparent;
-    color: #AAAE7F;
-    background-color: #AAAE7F;
-}
+    .navbar-default .navbar-toggle:hover {
+        border-color: #AAAE7F;
+        background-color: transparent;
+        color: #AAAE7F;
+        background-color: #AAAE7F;
+    }
 
-.navbar-default .navbar-toggle:enabled {
-    background-color: transparent;
-}
+    .navbar-default .navbar-toggle:enabled {
+        background-color: transparent;
+    }
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #DFFDFF;
-}
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #DFFDFF;
+    }
 
 .welcome {
     margin-top: 50px;
@@ -107,29 +107,23 @@
     padding: 25px 0px;
 }
 
-.btn-submit {
-    background: #FFD34E;
-    border: 0px;
+.ghost-button {
     display: inline-block;
-    font-size: 16px;
-    padding: 10px 40px;
-    font-weight: normal;
-    border-radius: 0px;
-    letter-spacing: 1px;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    margin-top: 25px;
-    border: 2px solid #FFD34E;
+    background-color: #DFFDFF;
+    padding: 12px;
+    color: #03121A;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-    .btn-submit:hover {
-        background: #fff;
+    .ghost-button:hover,
+    .ghost-button:active {
+        background-color: #AAAE7F;
+        color: #DFFDFF;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
     }
 
 #cta-1 {
@@ -164,7 +158,7 @@
     width: 92px;
 }
 
-.benefits-wrapper{
+.benefits-wrapper {
     text-align: center;
 }
 

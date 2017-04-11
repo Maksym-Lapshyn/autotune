@@ -1,6 +1,6 @@
 ﻿body {
     line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
     color: #DFFDFF;
     background-color: #DFFDFF;
@@ -39,7 +39,7 @@
 
 .welcome {
     margin-top: 50px;
-    background: url('../Images/Infrastructure/123.jpg');
+    background: url('../Images/Infrastructure/head.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -109,19 +109,23 @@
 
 .ghost-button {
     display: inline-block;
-    background-color: #DFFDFF;
+    background-color: transparent;
     padding: 12px;
-    color: #03121A;
+    color: #DFFDFF;
+    border: 2px solid #DFFDFF;
     text-align: center;
     outline: none;
     text-decoration: none;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    margin-top: 38px;
 }
 
     .ghost-button:hover,
     .ghost-button:active {
-        background-color: #AAAE7F;
         color: #DFFDFF;
+        background-color: #AAAE7F;
+        border:none;
+        border: 2px solid #AAAE7F;
         text-decoration: none;
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
     }
@@ -150,20 +154,21 @@
     margin-bottom: 50px;
 }
 
-.benefits-icon {
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    height: 92px;
-    width: 92px;
+.benefits-wrapper{
+    color: #03121A;
+    text-align:center;
 }
 
-.benefits-wrapper {
-    text-align: center;
+.benefits-wrapper img {
+    height: 128px;
+    width: 128px;
+    float:left;
+    margin-right:10px;
+    margin-top:25px;
 }
 
-.benefits-text {
-    color: black;
+.benefits-wrapper p {
+    text-align:start;
 }
 
 h1.txt-tl {
@@ -175,7 +180,7 @@ h1.txt-tl {
     margin-bottom: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: url('../Images/Infrastructure/111.jpg') no-repeat center fixed;
+    background: url('../Images/Infrastructure/scroll.jpg') no-repeat center fixed;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
@@ -189,17 +194,17 @@ h1.txt-tl {
     background-position: center center;
     position: relative;
     display: block;
+    color: #DFFDFF;
 }
 
-.cta-txt h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
+.scroller-text h3 {
+    font-size: 22px;
     font-weight: 700;
-    color: #fff;
 }
 
-.cta-txt p {
-    color: #fff;
+.scroller-text h1 {
+    font-size: 14px;
+    line-height:21px;
 }
 /****/
 .portfolio-box {
@@ -218,13 +223,17 @@ footer {
     background-color: #03121A;
 }
 /****/
-@media (min-width: 451px) and (max-width: 900px) {
+@media (min-width: 451px) and (max-width: 1000px) {
     .section-title {
         margin-bottom: 15px;
     }
 
     .title {
         font-size: 60px;
+    }
+
+    .benefits-wrapper img {
+        margin-top:0px;
     }
 }
 
@@ -239,10 +248,6 @@ footer {
 
     .section-title {
         margin-bottom: 15px;
-    }
-
-    .cta-txt h3 {
-        font-size: 28px;
     }
 
     body {

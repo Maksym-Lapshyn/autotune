@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Контакты";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Посмотреть примеры работ, получить консультацию, а также заказать обвес и прочие изделия из нержавеющей стали Вы можете по адресу:</h1>
+    <h3>
+        Харьков, Украина<br />
+        Октябрьский Район<br />
+        Станция метро "Холодная гора"<br />
+        Улица Григоровская 66/2
+    </h3>
+    <h1>Карта</h1>
+    <div id="map" style="height:400px; width:100%;">
+
+    </div>
+</div>
+
+
+<script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>

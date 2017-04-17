@@ -27,9 +27,9 @@
                     </div>
                     <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="#header">Главная</a></li>
+                            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                             <li><a href="#feature">Наши работы</a></li>
-                            <li><a href="#portfolio">Контакты</a></li>
+                            <li>@Html.ActionLink("Контакты", "Contacts", "Home")</li>
                         </ul>
                     </div>
                 </div>
@@ -53,5 +53,8 @@
     <script src="~/Scripts/bootstrap.js"></script>
     <script src="~/Scripts/wow.js"></script>
     <script src="~/Scripts/custom.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9WAVSF4YvCHidqHRIEHEpAG1CvUXso7M&callback=initMap">
+    </script>
 </body>
 </html>

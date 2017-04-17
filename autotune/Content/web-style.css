@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
     line-height: 1.5;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
@@ -150,8 +152,8 @@
 }
 
 .benefits {
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .benefits-wrapper{
@@ -159,15 +161,23 @@
     text-align:center;
 }
 
-.benefits-wrapper img {
-    height: 128px;
-    width: 128px;
-    float:left;
-    margin-right:15px;
+.benefit{
+    display:table-row;
 }
 
-.benefits-wrapper p {
-    text-align:start;
+.benefit-left, .benefit-right{
+    display:table-cell;
+    vertical-align:top;
+    text-align:left;
+}
+
+.benefit-left{
+    padding-right: 30px;
+}
+
+.benefit-left img{
+    width:128px;
+    height:128px;
 }
 
 h1.txt-tl {
@@ -177,8 +187,8 @@ h1.txt-tl {
 
 .scroller {
     margin-bottom: 50px;
-    padding-top: 50px;
     padding-bottom: 50px;
+    padding-top: 40px;
     background: url('../Images/Infrastructure/scroll.jpg') no-repeat center fixed;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -230,16 +240,17 @@ footer {
     .title {
         font-size: 60px;
     }
-
-    .benefits-wrapper img {
-        margin-top:0px;
-    }
 }
 
 @media (min-width: 301px) and (max-width: 450px) {
     .navbar-default .navbar-brand {
         font-size: 26px;
     }
+
+    .benefit-left img{
+    width:64px;
+    height:64px;
+}
 
     .title {
         font-size: 50px;

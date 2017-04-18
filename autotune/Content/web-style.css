@@ -1,4 +1,29 @@
-﻿
+﻿a {
+    color: #AAAE7F;
+}
+
+.address {
+    margin-top: 100px;
+    color: #03121A;
+}
+
+    .address hr {
+        border-color: #AAAE7F;
+    }
+
+    .address h1 {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+.address-icon {
+    font-size: 18px;
+}
+
+#map {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
 
 body {
     line-height: 1.5;
@@ -56,7 +81,7 @@ body {
     padding: 0px;
     height: inherit;
     margin-top: -3px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -126,7 +151,7 @@ body {
     .ghost-button:active {
         color: #DFFDFF;
         background-color: #AAAE7F;
-        border:none;
+        border: none;
         border: 2px solid #AAAE7F;
         text-decoration: none;
         transition: background-color 0.3s ease-in, color 0.3s ease-in;
@@ -156,29 +181,29 @@ body {
     margin-bottom: 30px;
 }
 
-.benefits-wrapper{
+.benefits-wrapper {
     color: #03121A;
-    text-align:center;
+    text-align: center;
 }
 
-.benefit{
-    display:table-row;
+.benefit {
+    display: table-row;
 }
 
-.benefit-left, .benefit-right{
-    display:table-cell;
-    vertical-align:top;
-    text-align:left;
+.benefit-left, .benefit-right {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
 }
 
-.benefit-left{
+.benefit-left {
     padding-right: 30px;
 }
 
-.benefit-left img{
-    width:128px;
-    height:128px;
-}
+    .benefit-left img {
+        width: 92px;
+        height: 92px;
+    }
 
 h1.txt-tl {
     font-size: 24px;
@@ -213,7 +238,7 @@ h1.txt-tl {
 
 .scroller-text h1 {
     font-size: 14px;
-    line-height:21px;
+    line-height: 21px;
 }
 /****/
 .portfolio-box {
@@ -228,7 +253,7 @@ h1.txt-tl {
 
 footer {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     background-color: #03121A;
 }
 /****/
@@ -240,6 +265,9 @@ footer {
     .title {
         font-size: 60px;
     }
+    .contacts-wrapper {
+        text-align: center;
+    }
 }
 
 @media (min-width: 301px) and (max-width: 450px) {
@@ -247,10 +275,14 @@ footer {
         font-size: 26px;
     }
 
-    .benefit-left img{
-    width:64px;
-    height:64px;
-}
+    .benefit-left img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .contacts-wrapper {
+        text-align: center;
+    }
 
     .title {
         font-size: 50px;

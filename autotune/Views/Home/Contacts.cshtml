@@ -3,31 +3,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <h1>Посмотреть примеры работ, получить консультацию, а также заказать обвес и прочие изделия из нержавеющей стали Вы можете по адресу:</h1>
-    <h3>
-        Харьков, Украина<br />
-        Октябрьский Район<br />
-        Станция метро "Холодная гора"<br />
-        Улица Григоровская 66/2
-    </h3>
-    <h1>Карта</h1>
-    <div id="map" style="height:400px; width:100%;">
+<section class="address">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 text-center wow fadeInRight delay-05s">
+                <h1>Посмотреть примеры работ, подобрать материал, а также заказать обвес и прочие изделия из нержавеющей стали Вы можете по адресу:</h1>
+                <hr />
+                <span class="address-icon glyphicon glyphicon-globe"></span><br />
+                <p>
+                    Харьков, Украина<br />
+                    Октябрьский Район<br />
+                    Станция метро "Холодная гора"<br />
+                    Улица Григоровская 66/2
+                </p>
+            </div>
+            <div class="col-lg-6 col-sm-12 text-center wow fadeInRight delay-05s">
+                <h1>Получить консультацию, договориться о встрече, выслать размеры и обменяться информацией Вы можете по телефону или электронной почте:</h1>
+                <hr />
+                <span class="address-icon glyphicon glyphicon-earphone"></span><br />
+                <p>097-461-50-35 (Киевстар)</p>
+                <span class="address-icon glyphicon glyphicon-envelope"></span><br />
+                <p>neversayhello@mail.ru</p>
+            </div>
+        </div>
+        <div class="wow fadeInUp delay-05s" id="map" style="height:400px; width:100%;">
 
+        </div>
     </div>
-</div>
+</section>
+
 
 
 <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+    function initMap() {
+        var place = { lat: 49.9789373, lng: 36.1964004 };
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+            zoom: 14,
+            center: place
         });
         var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+            position: place,
+            map: map
         });
-      }
+    }
 </script>

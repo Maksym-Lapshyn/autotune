@@ -6,7 +6,7 @@
 <section class="address">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-sm-12 text-center wow fadeInRight delay-05s">
+            <div class="col-lg-6 col-sm-12 text-center wow fadeInLeft delay-05s">
                 <h1>Посмотреть примеры работ, подобрать материал, а также заказать обвес и прочие изделия из нержавеющей стали Вы можете по адресу:</h1>
                 <hr />
                 <span class="address-icon glyphicon glyphicon-globe"></span><br />
@@ -26,7 +26,7 @@
                 <p>neversayhello@mail.ru</p>
             </div>
         </div>
-        <div class="wow fadeInUp delay-05s" id="map" style="height:400px; width:100%;">
+        <div id="map" style="height:400px; width:100%;">
 
         </div>
     </div>
@@ -38,7 +38,7 @@
     function initMap() {
         var place = { lat: 49.9789373, lng: 36.1964004 };
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 14,
+            zoom: 13,
             center: place
         });
         var marker = new google.maps.Marker({

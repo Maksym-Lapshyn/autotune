@@ -16,14 +16,15 @@ namespace autotune.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Categories()
         {
             return View();
         }
 
-        public ActionResult Portfolio()
+        public ActionResult Category(string categoryName)
         {
-            return View();
+            IEnumerable<Product> products = repo.Products.Where(p => p.Category.ToString() == categoryName);
+            return View(products.ToList());
         }
 
         public ActionResult Contacts()

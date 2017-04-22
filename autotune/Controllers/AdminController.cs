@@ -28,14 +28,13 @@ namespace autotune.Controllers
         {
             if (ModelState.IsValid)
             {
-                repo.SaveProduct(product);
                 if (image != null)
                 {
-                    string imageName = string.Format("big_{0}.jpg", product.Id);
+                    string imageName = string.Format("img_{0}.jpg", product.Id);
                     image.SaveAs(Server.MapPath("~/Images/" + imageName));
                     product.BigImage = imageName;
-                    repo.SaveProduct(product);
                 }
+                repo.SaveProduct(product);
                 TempData["success"] = string.Format("Товар {0} сохранен", product.Name);
                 return RedirectToAction("Index");
             }

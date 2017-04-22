@@ -32,6 +32,8 @@ namespace autotune.Models
             if (product.Id == 0)
             {
                 pc.Products.Add(product);
+                product.BigImage = ResizeBigImage(product.Id);
+                product.SmallImage = SaveSmallImage(product.Id);
             }
             else
             {
@@ -44,7 +46,7 @@ namespace autotune.Models
                     }
                     forSave.Name = product.Name;
                     forSave.Description = product.Description;
-                    forSave.BigImage = product.BigImage;
+                    forSave.BigImage = ResizeBigImage(product.Id);
                     forSave.SmallImage = SaveSmallImage(product.Id);
                     forSave.Category = product.Category;
                 }
@@ -52,53 +54,18 @@ namespace autotune.Models
             pc.SaveChanges();
         }
 
-        /*private static Bitmap Resize(Bitmap imgPhoto, Size objSize, ImageFormat enuType)
+        private string ResizeBigImage(int productId)
         {
-            int sourceWidth = imgPhoto.Width;
-            int sourceHeight = imgPhoto.Height;
-            int sourceX = 0;
-            int sourceY = 0;
-
-            int destX = 0;
-            int destY = 0;
-            int destWidth = objSize.Width;
-            int destHeight = objSize.Height;
-
-            Bitmap bmPhoto;
-            if (enuType == ImageFormat.Png)
-                bmPhoto = new Bitmap(destWidth, destHeight, PixelFormat.Format32bppArgb);
-            else if (enuType == ImageFormat.Gif)
-                bmPhoto = new Bitmap(destWidth, destHeight);
-            else
-                bmPhoto = new Bitmap(destWidth, destHeight, PixelFormat.Format24bppRgb);
-
-
-
-            //If you want to override the default 96dpi resolution do it here
-            //bmPhoto.SetResolution(72, 72);
-
-            Graphics grPhoto = Graphics.FromImage(bmPhoto);
-            grPhoto.InterpolationMode = InterpolationMode.HighQualityBicubic;
-            grPhoto.DrawImage(imgPhoto,
-                new Rectangle(destX, destY, destWidth, destHeight),
-                new Rectangle(sourceX, sourceY, sourceWidth, sourceHeight),
-                GraphicsUnit.Pixel);
-
-            grPhoto.Dispose();
-            return bmPhoto;
+            String oldImageLocation = HttpContext.Current.Server.MapPath(string.Format("~/Images/img_{0}.jpg", productId));
+            Bitmap oldImage = new Bitmap(oldImageLocation);
+            Size newSize = new Size(1024, 768);
+            Bitmap resizedImage = new Bitmap(oldImage, newSize);
+            oldImage.Dispose();
+            System.IO.File.Delete(oldImageLocation);
+            resizedImage.Save(HttpContext.Current.Server.MapPath(string.Format("~/Images/big_{0}.jpg", productId)), ImageFormat.Jpeg);
+            resizedImage.Dispose();
+            return string.Format("big_{0}.jpg", productId);
         }
-
-        private string SaveSmallImage(int id)
-        {
-            String strImageFile = HttpContext.Current.Server.MapPath(string.Format("~/Images/big_{0}.jpg", id));
-            Bitmap objImage = new Bitmap(strImageFile);
-            Size objNewSize = new Size(200, 200);
-            Bitmap objNewImage = Resize(objImage, objNewSize, ImageFormat.Jpeg);
-            objNewImage.Save(HttpContext.Current.Server.MapPath(string.Format("~/Images/small_{0}.jpg", id)), ImageFormat.Jpeg);
-            objNewImage.Dispose();
-            objImage.Dispose();
-            return string.Format("small_{0}.jpg", id);
-        }*/
 
         private string SaveSmallImage(int productId)
         {

@@ -15,6 +15,8 @@ namespace autotune.Models
         ProjectContext pc = new ProjectContext();
         public IEnumerable<Product> Products { get { return pc.Products; } }
 
+        public const string TempImage = "~/Images/temp.jpg";
+
         public Product DeleteProduct(int id)
         {
             Product productForDelete = pc.Products.Find(id);
@@ -32,8 +34,12 @@ namespace autotune.Models
             if (product.Id == 0)
             {
                 pc.Products.Add(product);
+                pc.SaveChanges();
+                product = pc.Products.Where(p => p.Name == product.Name).FirstOrDefault();
                 product.BigImage = ResizeBigImage(product.Id);
                 product.SmallImage = SaveSmallImage(product.Id);
+                pc.SaveChanges();
+                return;
             }
             else
             {
@@ -50,13 +56,13 @@ namespace autotune.Models
                     forSave.SmallImage = SaveSmallImage(product.Id);
                     forSave.Category = product.Category;
                 }
+                pc.SaveChanges();
             }
-            pc.SaveChanges();
         }
 
         private string ResizeBigImage(int productId)
         {
-            String oldImageLocation = HttpContext.Current.Server.MapPath(string.Format("~/Images/img_{0}.jpg", productId));
+            String oldImageLocation = HttpContext.Current.Server.MapPath(TempImage);
             Bitmap oldImage = new Bitmap(oldImageLocation);
             Size newSize = new Size(1024, 768);
             Bitmap resizedImage = new Bitmap(oldImage, newSize);

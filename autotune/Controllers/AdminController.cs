@@ -30,9 +30,8 @@ namespace autotune.Controllers
             {
                 if (image != null)
                 {
-                    string imageName = string.Format("img_{0}.jpg", product.Id);
-                    image.SaveAs(Server.MapPath("~/Images/" + imageName));
-                    product.BigImage = imageName;
+                    image.SaveAs(Server.MapPath(ProjectRepository.TempImage));
+                    product.BigImage = ProjectRepository.TempImage;
                 }
                 repo.SaveProduct(product);
                 TempData["success"] = string.Format("Товар {0} сохранен", product.Name);

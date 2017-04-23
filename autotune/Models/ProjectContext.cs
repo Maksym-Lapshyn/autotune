@@ -4,6 +4,7 @@ namespace autotune.Models
     using System.Data.Entity;
     using System.Linq;
     using System.ComponentModel.DataAnnotations;
+    using autotune.Infrastructure;
 
     public class ProjectContext : DbContext
     {
@@ -30,6 +31,7 @@ namespace autotune.Models
         public int Id { get; set; }
         
         [Required(ErrorMessage = "Enter product's name!")]
+        //[ProductName(ErrorMessage = "Product names cannot repeat!")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Enter product's description!")]

@@ -210,7 +210,7 @@ h1.txt-tl {
     line-height: 1.35;
 }
 
-.categories{
+.categories {
     margin-top: 150px;
     margin-bottom: 40px;
 }
@@ -253,13 +253,14 @@ h1.txt-tl {
     position: relative;
     display: block;
     max-width: 650px;
+    overflow: hidden;
 }
 
     .portfolio-box .portfolio-box-caption {
         color: white;
         opacity: 0;
         display: block;
-        background: rgba(170, 174, 127, 0.93);
+        background: rgba(3, 18, 26, 0.93);
         position: absolute;
         bottom: 0;
         text-align: center;
@@ -277,6 +278,23 @@ h1.txt-tl {
             top: 50%;
             transform: translateY(-50%);
         }
+
+    .portfolio-box img {
+        max-width: 100%;
+        -webkit-transition: all 0.3s ease; /* Safari and Chrome */
+        -moz-transition: all 0.3s ease; /* Firefox */
+        -ms-transition: all 0.3s ease; /* IE 9 */
+        -o-transition: all 0.3s ease; /* Opera */
+        transition: all 0.3s ease;
+    }
+
+    .portfolio-box:hover img {
+        -webkit-transform: scale(1.15); /* Safari and Chrome */
+        -moz-transform: scale(1.15); /* Firefox */
+        -ms-transform: scale(1.15); /* IE 9 */
+        -o-transform: scale(1.15); /* Opera */
+        transform: scale(1.15);
+    }
 
     .portfolio-box:hover .portfolio-box-caption {
         opacity: 1;
@@ -339,12 +357,20 @@ footer {
     h3.txt-tl {
         font-size: 20px;
     }
+
+    .categories {
+        margin-top: 160px;
+    }
 }
 
 @media (max-width: 300px) {
     .navbar-default .navbar-brand {
         font-size: 22px;
         margin-right: 20px;
+    }
+
+        .categories {
+        margin-top: 160px;
     }
 }
 /****/

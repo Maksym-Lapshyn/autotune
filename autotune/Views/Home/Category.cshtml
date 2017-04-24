@@ -6,5 +6,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Category</h2>
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            @foreach (Product product in Model)
+            {
+                <div class="col-md-4 col-xs-6 wow fadeInLeft delay-05s">
+                    <a href="@Url.Action("Product", "Home", new { productId = product.Id })">
+                        <div class="portfolio-box">
+                            <img src="../Images/@product.SmallImage" alt="" class="img-responsive">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <h3>@product.Name</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
 

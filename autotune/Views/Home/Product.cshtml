@@ -1,0 +1,16 @@
+﻿@using autotune.Models
+@model Product
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="categories">
+    <div class="container">
+        <img src="../Images/@Model.BigImage" alt="@Model.Name" name="@Model.Name" class="img-responsive">
+        <h1 class="txt-tl">@Model.Name</h1>
+        <h3>@Model.Description</h3>
+    </div>
+</section>
+

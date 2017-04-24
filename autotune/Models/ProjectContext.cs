@@ -26,12 +26,12 @@ namespace autotune.Models
         public virtual DbSet<Product> Products { get; set; }
     }
 
+    [ProductName(ErrorMessage = "Product names cannot repeat!")]
     public class Product
     {
         public int Id { get; set; }
         
         [Required(ErrorMessage = "Enter product's name!")]
-        //[ProductName(ErrorMessage = "Product names cannot repeat!")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Enter product's description!")]

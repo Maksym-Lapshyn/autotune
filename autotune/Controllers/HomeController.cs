@@ -27,6 +27,12 @@ namespace autotune.Controllers
             return View(products.ToList());
         }
 
+        public ActionResult Product(int productId)
+        {
+            Product product = repo.Products.Where(p => p.Id == productId).FirstOrDefault();
+            return View(product);
+        }
+
         public ActionResult Contacts()
         {
             return View();

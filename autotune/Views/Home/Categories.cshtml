@@ -1,12 +1,13 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Категории";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <section class="categories">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-xs-12 wow fadeInLeft delay-05s">
+        <div class="row text-center">
+            <div class="col-sm-6 wow fadeInLeft delay-05s">
                 <a href="@Url.Action("Category", "Home", new { categoryName = "Front" })">
                     <div class="portfolio-box">
                         <img src="../Images/Infrastructure/front.jpg" alt="" class="img-responsive">
@@ -18,8 +19,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-xs-12 wow fadeInRight delay-05s">
-                <a href="Home/Category/Rear">
+            <div class="col-sm-6 wow fadeInRight delay-05s">
+                <a href="@Url.Action("Category", "Home", new { categoryName = "Rear" })">
                     <div class="portfolio-box">
                         <img src="../Images/Infrastructure/rear.jpg" alt="" class="img-responsive">
                         <div class="portfolio-box-caption">
@@ -30,8 +31,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-xs-12 wow fadeInLeft delay-05s">
-                <a href="Home/Category/Side">
+            <div class="col-sm-6 wow fadeInLeft delay-05s">
+                <a href="@Url.Action("Category", "Home", new { categoryName = "Side" })">
                     <div class="portfolio-box">
                         <img src="../Images/Infrastructure/side.jpg" alt="" class="img-responsive">
                         <div class="portfolio-box-caption">
@@ -42,8 +43,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-xs-12 wow fadeInRight delay-05s">
-                <a href="Home/Category/Other">
+            <div class="col-sm-6 wow fadeInRight delay-05s">
+                <a href="@Url.Action("Category", "Home", new { categoryName = "Other" })">
                     <div class="portfolio-box">
                         <img src="../Images/Infrastructure/other.jpg" alt="" class="img-responsive">
                         <div class="portfolio-box-caption">

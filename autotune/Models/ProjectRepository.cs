@@ -50,6 +50,7 @@ namespace autotune.Models
                     {
                         DeleteImages(forSave);
                     }
+
                     forSave.Name = product.Name;
                     forSave.Description = product.Description;
                     forSave.BigImage = ResizeBigImage(product.Id);
@@ -77,7 +78,7 @@ namespace autotune.Models
         {
             String bigImageLocation = HttpContext.Current.Server.MapPath(string.Format("~/Images/big_{0}.jpg", productId));
             Bitmap bigImage = new Bitmap(bigImageLocation);
-            Size newSize = new Size(200, 150);
+            Size newSize = new Size(400, 300);
             Bitmap smallImage = new Bitmap(bigImage, newSize);
             smallImage.Save(HttpContext.Current.Server.MapPath(string.Format("~/Images/small_{0}.jpg", productId)), ImageFormat.Jpeg);
             smallImage.Dispose();

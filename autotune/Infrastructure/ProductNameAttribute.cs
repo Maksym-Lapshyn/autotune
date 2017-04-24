@@ -13,14 +13,17 @@ namespace autotune.Infrastructure
         ProjectRepository repo = new ProjectRepository();
         public override bool IsValid(object value)
         {
-            string name = value as string;
-            Product product = repo.Products.Where(p => p.Name == name).FirstOrDefault();
-            if (product == null)
+            Product newProduct = value as Product;
+            Product oldProduct = repo.Products.Where(p => p.Name == newProduct.Name).FirstOrDefault();
+            if (oldProduct != null)
             {
-                return true;
+                if (oldProduct.Id != newProduct.Id)
+                {
+                    return false;
+                }
             }
 
-            return false;
+            return true;
         }
     }
 }

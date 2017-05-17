@@ -65,7 +65,7 @@ namespace autotune.Models
         {
             String oldImageLocation = HttpContext.Current.Server.MapPath(TempImage);
             Bitmap oldImage = new Bitmap(oldImageLocation);
-            Size newSize = new Size(1024, 768);
+            Size newSize = new Size(1440, 1080);
             Bitmap resizedImage = new Bitmap(oldImage, newSize);
             oldImage.Dispose();
             System.IO.File.Delete(oldImageLocation);
@@ -78,7 +78,7 @@ namespace autotune.Models
         {
             String bigImageLocation = HttpContext.Current.Server.MapPath(string.Format("~/Images/big_{0}.jpg", productId));
             Bitmap bigImage = new Bitmap(bigImageLocation);
-            Size newSize = new Size(1440, 1080);
+            Size newSize = new Size(400, 300);
             Bitmap smallImage = new Bitmap(bigImage, newSize);
             smallImage.Save(HttpContext.Current.Server.MapPath(string.Format("~/Images/small_{0}.jpg", productId)), ImageFormat.Jpeg);
             smallImage.Dispose();

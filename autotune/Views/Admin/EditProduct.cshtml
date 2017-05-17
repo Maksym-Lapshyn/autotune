@@ -39,12 +39,12 @@
                 <p>
                     @if (Model.BigImage == null)
                 {
-                        <input type="file" name="upload" class="form-control" />
+                        <input type="file" name="image" class="form-control" />
                     }
                     else
                     {
                         <img src="~/Images/@Model.BigImage" width="384" height="216" />
-                        <input type="file" name="upload" class="form-control" />
+                        <input type="file" name="image" class="form-control" />
                     }
                 </p>
             </div>

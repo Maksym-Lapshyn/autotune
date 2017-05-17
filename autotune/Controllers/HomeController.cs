@@ -33,6 +33,19 @@ namespace autotune.Controllers
             return View(product);
         }
 
+        public ActionResult Image(int productId)
+        {
+            Product product = repo.Products.Where(p => p.Id == productId).FirstOrDefault();
+            return View(product);
+        }
+
+        public PartialViewResult SimilarProducts(int productId)
+        {
+            Product product = repo.Products.Where(p => p.Id == productId).First();
+            List<Product> products = repo.Products.Where(p => p.Category == product.Category).ToList();
+            return PartialView(products);
+        }
+
         public ActionResult Contacts()
         {
             return View();

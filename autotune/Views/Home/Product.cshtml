@@ -4,13 +4,51 @@
 @{
     ViewBag.Title = "Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string categoryName = string.Empty;
+    if (Model.Category.ToString() == "Front")
+    {
+        categoryName = "Передние защиты";
+    }
+    else if (Model.Category.ToString() == "Rear")
+    {
+        categoryName = "Задние защиты";
+    }
+    else if (Model.Category.ToString() == "Footer")
+    {
+        categoryName = "Пороги";
+    }
+    else
+    {
+        categoryName = "Прочее";
+    }
 }
 
-<section class="categories">
+<section class="site-content categories product">
     <div class="container">
-        <img src="../Images/@Model.BigImage" alt="@Model.Name" name="@Model.Name" class="img-responsive">
-        <h1 class="txt-tl">@Model.Name</h1>
-        <h3>@Model.Description</h3>
+        <div class="row">
+            <div class="visible-lg visible-md col-md-7">
+                <img src="../Images/@Model.BigImage" alt="@Model.Name" name="@Model.Name" class="img-responsive">
+            </div>
+            <div class="visible-sm visible-xs text-center">
+                <img src="../Images/@Model.BigImage" alt="@Model.Name" name="@Model.Name" class="img-responsive">
+            </div>
+            <div class="col-md-5 wow fadeInRight delay-01s">
+                <h1>@Model.Name</h1>
+                <hr class="visible-md visible-lg" />
+                <hr class="hr-center visible-sm visible-xs" />
+                <h3>Категория - @Html.ActionLink(categoryName, "Category", "Home", new { categoryName = Model.Category.ToString() }, new { @class = "anchor-standard" })</h3>
+                <p>@Model.Description</p>
+                <div class="visible-md visible-lg">
+                    <h4><a class="ghost-button-inverse" href="@Url.Action("Image", "Home", new { productId = Model.Id })" target="_blank">Открыть фото</a></h4>
+                </div>
+                <div class="visible-xs visible-sm text-center">
+                    <h4><a class="ghost-button-inverse" href="@Url.Action("Image", "Home", new { productId = Model.Id })" target="_blank">Открыть фото</a></h4>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-center">Похожие работы:</h3>
+        <hr class="hr-center" />
+        @{ Html.RenderAction("SimilarProducts", "Home", new { productId = Model.Id });}
     </div>
 </section>
 

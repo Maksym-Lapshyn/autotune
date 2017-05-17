@@ -78,7 +78,7 @@ namespace autotune.Models
         {
             String bigImageLocation = HttpContext.Current.Server.MapPath(string.Format("~/Images/big_{0}.jpg", productId));
             Bitmap bigImage = new Bitmap(bigImageLocation);
-            Size newSize = new Size(400, 300);
+            Size newSize = new Size(1440, 1080);
             Bitmap smallImage = new Bitmap(bigImage, newSize);
             smallImage.Save(HttpContext.Current.Server.MapPath(string.Format("~/Images/small_{0}.jpg", productId)), ImageFormat.Jpeg);
             smallImage.Dispose();
@@ -98,6 +98,45 @@ namespace autotune.Models
             {
                 System.IO.File.Delete(bigPath);
             }
+        }
+
+        public int GetSimilarProducts(int productId, bool left, bool right)
+        {
+            Product product = pc.Products.Find(productId);
+            List<Product> repository = pc.Products.Where(p => p.Category == product.Category).ToList();
+            int position = 0;
+            for (int i = 0; i < repository.Count; i++)
+            {
+                if (repository[i].Id == productId)
+                {
+                    position = i;
+                }
+            }
+            int indexOfFirstElement = 0;
+            if (left == true)
+            {
+                position -= 4;
+            }
+            else if (right == true)
+            {
+                position += 4;
+            }
+            if (position < repository.Count - 3)
+            {
+                if (position < 0)
+                {
+                    indexOfFirstElement = 0;
+                }
+                else
+                {
+                    indexOfFirstElement = position;
+                }
+            }
+            else if (position >= repository.Count - 3)
+            {
+                indexOfFirstElement = position - 3;
+            }
+            return indexOfFirstElement;
         }
     }
 }

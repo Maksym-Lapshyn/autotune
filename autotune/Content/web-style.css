@@ -1,4 +1,6 @@
-﻿html{
+﻿
+
+html{
     height: 100%;
 }
 
@@ -251,8 +253,8 @@ body {
 }
 
 .benefits {
-    margin-top: 22px;
     margin-bottom: 33px;
+    margin-top: -28px;
 }
 
 .benefits-wrapper {
@@ -286,7 +288,7 @@ h1.txt-tl {
 
 .categories {
     margin-top: 150px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
 }
 
 .scroller {
@@ -399,11 +401,6 @@ footer {
 }
 /****/
 @media (min-width: 451px) and (max-width: 1000px) {
-
-    .address {
-        margin-bottom: -8px;
-    }
-
     .section-title {
         margin-bottom: 15px;
     }
@@ -414,18 +411,6 @@ footer {
 
     .contacts-wrapper {
         text-align: center;
-    }
-
-    .categories {
-        margin-top: 150px;
-        margin-bottom: 22px;
-    }
-}
-
-@media (min-width: 767px) and (max-width: 1001px) {
-        .categories {
-        margin-top: 150px;
-        margin-bottom: 40px;
     }
 }
 
@@ -458,20 +443,12 @@ footer {
     h3.txt-tl {
         font-size: 20px;
     }
-
-    .categories {
-        margin-top: 160px;
-    }
 }
 
 @media (max-width: 300px) {
     .navbar-default .navbar-brand {
         font-size: 22px;
         margin-right: 20px;
-    }
-
-    .categories {
-        margin-top: 160px;
     }
 }
 
@@ -557,6 +534,16 @@ footer {
     }
 }
 
+@media (max-width: 992px ) {
+    .benefits{
+        margin-bottom: 50px;
+    }
+
+    .products{
+        margin-bottom: 38px;
+    }
+}
+
 /* CSS used here will be applied after bootstrap.css */
 #carousel {
     margin-top: 20px;
@@ -572,4 +559,6 @@ footer {
 
 .products {
     color: #03121A;
+    margin-top:30px;
+    margin-bottom:49px;
 }

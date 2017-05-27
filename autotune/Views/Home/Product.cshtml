@@ -2,7 +2,7 @@
 @model Product
 
 @{
-    ViewBag.Title = "Product";
+    ViewBag.Title = string.Format("Обвес из нержавейки Харьков - {0}", Model.Name);
     Layout = "~/Views/Shared/_Layout.cshtml";
     string categoryName = string.Empty;
     if (Model.Category.ToString() == "Front")

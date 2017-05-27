@@ -326,6 +326,8 @@ h1.txt-tl {
     display: block;
     max-width: 650px;
     overflow: hidden;
+    margin-left:-8px;
+    margin-right:-8px;
 }
 
     .portfolio-box .portfolio-box-caption {
@@ -532,15 +534,7 @@ footer {
     }
 }
 
-@media (max-width: 992px ) {
-    .benefits{
-        margin-bottom: 50px;
-    }
 
-    .products{
-        margin-bottom: 38px;
-    }
-}
 
 /* CSS used here will be applied after bootstrap.css */
 #carousel {
@@ -558,5 +552,15 @@ footer {
 .products {
     color: #03121A;
     margin-top:30px;
-    margin-bottom:49px;
+    margin-bottom:50px;
+}
+
+@media (max-width: 992px ) {
+    .benefits{
+        margin-bottom: 50px;
+    }
+
+    .products{
+        margin-bottom: 37px;
+    }
 }

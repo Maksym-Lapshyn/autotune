@@ -49,12 +49,12 @@ namespace autotune.Models
                     if (forSave.BigImage != product.BigImage)
                     {
                         DeleteImages(forSave);
+                        forSave.BigImage = ResizeBigImage(product.Id);
+                        forSave.SmallImage = SaveSmallImage(product.Id);
                     }
 
                     forSave.Name = product.Name;
                     forSave.Description = product.Description;
-                    forSave.BigImage = ResizeBigImage(product.Id);
-                    forSave.SmallImage = SaveSmallImage(product.Id);
                     forSave.Category = product.Category;
                 }
                 pc.SaveChanges();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using autotune.Models;
+using autotune.Infrastructure;
 
 namespace autotune.Controllers
 {
@@ -36,7 +37,7 @@ namespace autotune.Controllers
         public PartialViewResult SimilarProducts(int productId)
         {
             Product product = repo.Products.Where(p => p.Id == productId).First();
-            List<Product> products = repo.Products.Where(p => p.Category == product.Category).ToList();
+            List<Product> products = repo.Products.Where(p => p.Category == product.Category).Shuffle(new Random()).ToList();
             return PartialView(products);
         }
 

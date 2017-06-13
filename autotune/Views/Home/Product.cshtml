@@ -2,7 +2,7 @@
 @model Product
 
 @{
-    ViewBag.Title = string.Format("Обвес из нержавейки Харьков - {0}", Model.Name);
+    ViewBag.Title = string.Format("Обвес из нержавейки в Харькове - {0}", Model.Name);
     Layout = "~/Views/Shared/_Layout.cshtml";
     string categoryName = string.Empty;
     if (Model.Category.ToString() == "Front")
@@ -48,8 +48,8 @@
 
 <script>
     $(document).ready(function () {
-        // Vanillaboxes
-        $('#single-image').vanillabox();
+        $('#single-image').vanillabox({
+        });
     });
 </script>
 
